@@ -37,7 +37,6 @@ def one(string):
         return y
 
 
-print(one("The"))
 
 
     # <QUESTION 2>
@@ -58,6 +57,9 @@ print(one("The"))
 
 def two(num):
     div = False
+    if num == 2:
+        div = True
+        return div
     for i in range(2, num):
         if num % i == 0:
             return div
@@ -65,8 +67,7 @@ def two(num):
             div = True
             return div
 
-print(two(8))
-    
+
 
     # <QUESTION 3>
 
@@ -91,7 +92,6 @@ def three(a):
     ans = a + int(b) + int(c) + int(d)
     return ans
 
-print(three(5))
 
     # <QUESTION 4>
 
@@ -123,7 +123,7 @@ print(three(5))
 def four(string1, string2):
     return ''.join(''.join(x) for x in zip(string1,string2))
 
-print(four("return", "letter"))
+
 
     # <QUESTION 5>
 
@@ -154,7 +154,6 @@ def five():
     list.append(v5)
     return list
 
-print(five())
 
     # <QUESTION 6>
 
@@ -175,13 +174,12 @@ print(five())
 
 def six(string):
     x = False
-    if string.endswith("py"):
+    if string.lower().endswith("py"):
         x = True
         return x
     else:
         return x
 
-print(six("pyiscool"))
 
     # <QUESTION 7>
 
@@ -215,7 +213,6 @@ def seven(a, b, c):
     else:
         return dif
 
-print(seven(4, 60, 9))
 
     # <QUESTION 8>
 
@@ -232,12 +229,13 @@ print(seven(4, 60, 9))
     # <HINT>
     # Use the cli to access the documentation help(str.replace)
 
-
+'''
 def eight(string, num):
     x = string.replace(string[len(string)/2]), " "
     return x
 
 print(eight("Chocolate", 3))
+'''
     # <QUESTION 9>
 
     # Given two string inputs, if one can be made from the other return the boolean True, if not return the boolean False.
@@ -255,7 +253,23 @@ print(eight("Chocolate", 3))
 
 def nine(string1, string2):
     # make sure string1 is the shortest of the two
-    return
+    str1 = string1
+    str2 = string2
+    make = False
+
+    if len(str1) > len(str2):
+        str1 = string2
+        str2 = string1
+
+    for letter in str2:
+        if letter in str1:
+            make = True
+            return make
+        else:
+            return make
+
+
+
 
     # <QUESTION 10>
 
@@ -272,6 +286,12 @@ def nine(string1, string2):
     # <HINT>
     # Think about nesting for loops.
 
-
+'''
 def ten(a, b):
-    return
+    for x in range(a):
+        for y in range(b[x]):
+            userInput[x][y]=x*y
+            return a[x][y]
+
+print(ten(3,2))
+''' 

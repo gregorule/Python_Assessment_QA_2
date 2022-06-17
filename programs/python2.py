@@ -32,7 +32,13 @@ import random
 
 
 def one(string):
-    return
+    for x in string:
+        y = x * 3
+        return y
+
+
+print(one("The"))
+
 
     # <QUESTION 2>
 
@@ -51,7 +57,16 @@ def one(string):
 
 
 def two(num):
-    return
+    div = False
+    for i in range(2, num):
+        if num % i == 0:
+            return div
+        else:
+            div = True
+            return div
+
+print(two(8))
+    
 
     # <QUESTION 3>
 
@@ -69,7 +84,14 @@ def two(num):
 
 
 def three(a):
-    return
+    stra = str(a)
+    b = stra * 2
+    c = stra * 3
+    d = stra * 4
+    ans = a + int(b) + int(c) + int(d)
+    return ans
+
+print(three(5))
 
     # <QUESTION 4>
 
@@ -99,7 +121,9 @@ def three(a):
 
 
 def four(string1, string2):
-    return
+    return ''.join(''.join(x) for x in zip(string1,string2))
+
+print(four("return", "letter"))
 
     # <QUESTION 5>
 
@@ -117,7 +141,20 @@ def four(string1, string2):
 
 
 def five():
-    return
+    list = []
+    v1 = random.randrange(100, 201, 2)
+    list.append(v1)
+    v2 = random.randrange(100, 201, 2)
+    list.append(v2)
+    v3 = random.randrange(100, 201, 2)
+    list.append(v3)
+    v4 = random.randrange(100, 201, 2)
+    list.append(v4)
+    v5 = random.randrange(100, 201, 2)
+    list.append(v5)
+    return list
+
+print(five())
 
     # <QUESTION 6>
 
@@ -137,7 +174,14 @@ def five():
 
 
 def six(string):
-    return
+    x = False
+    if string.endswith("py"):
+        x = True
+        return x
+    else:
+        return x
+
+print(six("pyiscool"))
 
     # <QUESTION 7>
 
@@ -162,7 +206,16 @@ def six(string):
 
 
 def seven(a, b, c):
-    return
+    list = [a, b, c]
+    order = sorted(list)
+    dif = False
+    if order[1] - order[0] == order[2] - order[1]:
+        dif = True
+        return dif
+    else:
+        return dif
+
+print(seven(4, 60, 9))
 
     # <QUESTION 8>
 
@@ -181,8 +234,10 @@ def seven(a, b, c):
 
 
 def eight(string, num):
-    return
+    x = string.replace(string[len(string)/2]), " "
+    return x
 
+print(eight("Chocolate", 3))
     # <QUESTION 9>
 
     # Given two string inputs, if one can be made from the other return the boolean True, if not return the boolean False.
